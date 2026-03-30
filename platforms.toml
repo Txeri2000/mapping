@@ -1,0 +1,45 @@
+# platforms.toml
+# Fuente de verdad de plataformas de simulación.
+# Añadir una plataforma nueva = añadir un bloque [[platforms]] y crear params/<name>.csv
+# Tras editar este fichero, ejecutar: python generate_stubs.py
+# (o dejar que el pre-commit hook lo haga automáticamente)
+
+[[platforms]]
+name = "psse"
+fields = [
+    { name = "address",          type = "str",   required = true                },
+    { name = "model",            type = "str",   required = true                },
+    { name = "scale_factor",     type = "float", required = false, default = 1.0 },
+    { name = "default_override", type = "float", required = false, default = "null" },
+]
+
+[[platforms]]
+name = "pscad"
+fields = [
+    { name = "component_id",     type = "str",   required = true                },
+    { name = "scale_factor",     type = "float", required = false, default = 1.0 },
+    { name = "default_override", type = "float", required = false, default = "null" },
+]
+
+[[platforms]]
+name = "pf"
+fields = [
+    { name = "element_type",     type = "str",   required = true                },
+    { name = "scale_factor",     type = "float", required = false, default = 1.0 },
+    { name = "default_override", type = "float", required = false, default = "null" },
+]
+
+[[platforms]]
+name = "tsat"
+fields = [
+    { name = "scale_factor",     type = "float", required = false, default = 1.0 },
+    { name = "default_override", type = "float", required = false, default = "null" },
+]
+
+[[platforms]]
+name = "emtp"
+fields = [
+    { name = "component_ref",    type = "str",   required = true                },
+    { name = "scale_factor",     type = "float", required = false, default = 1.0 },
+    { name = "default_override", type = "float", required = false, default = "null" },
+]

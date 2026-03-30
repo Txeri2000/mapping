@@ -1,0 +1,4 @@
+param_id,component_id,scale_factor,default_override
+Xd,SMIB_GEN:Xd,1.0,
+Xq,SMIB_GEN:Xq,1.0,
+H,SMIB_GEN:H,1.0,

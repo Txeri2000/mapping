@@ -1,0 +1,6 @@
+param_id,address,model,scale_factor,default_override
+Xd,GENROU:4,GENROU,1.0,
+Xq,GENROU:5,GENROU,1.0,
+Xdp,GENROU:6,GENROU,1.0,
+Td0p,GENROU:7,GENROU,1.0,
+H,GENROU:2,GENROU,1.0,

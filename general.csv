@@ -1,0 +1,6 @@
+param_id,name,description,unit,min,max,default
+Xd,Direct axis reactance,Synchronous reactance in d-axis,pu,0.0,5.0,1.2
+Xq,Quadrature axis reactance,Synchronous reactance in q-axis,pu,0.0,5.0,1.1
+Xdp,Transient d-axis reactance,Transient reactance in d-axis,pu,0.0,2.0,0.3
+Td0p,D-axis transient open-circuit time constant,Time constant Td0',s,0.1,20.0,5.0
+H,Inertia constant,Machine inertia constant,s,0.5,20.0,6.0

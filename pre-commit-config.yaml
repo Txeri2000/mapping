@@ -1,0 +1,27 @@
+# .pre-commit-config.yaml
+# Instalar pre-commit: pip install pre-commit
+# Activar hooks:       pre-commit install
+# Ejecutar manualmente sobre todos los ficheros: pre-commit run --all-files
+
+repos:
+  - repo: local
+    hooks:
+
+      # ── Regenera el stub .pyi cuando cambia platforms.toml ──────────────
+      - id: generate-stubs
+        name: "Regenerar parameters.pyi"
+        entry: python generate_stubs.py
+        language: system
+        files: ^platforms\.toml$       # solo se dispara si platforms.toml cambia
+        pass_filenames: false
+        # El fichero generado se añade automáticamente al commit
+        stages: [pre-commit]
+
+      # ── Valida integridad referencial entre CSVs ─────────────────────────
+      - id: validate-params
+        name: "Validar param_ids entre general.csv y plataformas"
+        entry: python validate_params.py
+        language: system
+        files: ^params/.*\.csv$        # se dispara si cualquier CSV cambia
+        pass_filenames: false
+        stages: [pre-commit]
