@@ -7,18 +7,19 @@
 [[platforms]]
 name = "psse"
 fields = [
-    { name = "address",          type = "str",   required = true                },
-    { name = "model",            type = "str",   required = true                },
+    { name = "psseID",           type = "str",   required = true                },
+    { name = "component",        type = "str",   required = true                },
+    { name = "psseType",         type = "str",   required = true                },
+    { name = "poniter",          type = "int",   required = true                },
     { name = "scale_factor",     type = "float", required = false, default = 1.0 },
-    { name = "default_override", type = "float", required = false, default = "null" },
 ]
 
 [[platforms]]
 name = "pscad"
 fields = [
-    { name = "component_id",     type = "str",   required = true                },
+    { name = "pscadID",          type = "str",   required = true                },
+    { name = "component",        type = "str",   required = true                },
     { name = "scale_factor",     type = "float", required = false, default = 1.0 },
-    { name = "default_override", type = "float", required = false, default = "null" },
 ]
 
 [[platforms]]
