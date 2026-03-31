@@ -8,6 +8,7 @@
 name = "psse"
 fields = [
     { name = "psseID",           type = "str",   required = true                },
+    { name = "internalID",           type = "str",   required = true                },
     { name = "component",        type = "str",   required = true                },
     { name = "psseType",         type = "str",   required = true                },
     { name = "poniter",          type = "int",   required = true                },
@@ -18,6 +19,7 @@ fields = [
 name = "pscad"
 fields = [
     { name = "pscadID",          type = "str",   required = true                },
+    { name = "internalID",          type = "str",   required = true                },
     { name = "component",        type = "str",   required = true                },
     { name = "scale_factor",     type = "float", required = false, default = 1.0 },
 ]
