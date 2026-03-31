@@ -8,19 +8,20 @@ from typing import Optional, Any
 
 class ParameterPSSE:
     param_id: str
-    address: str
-    model: str
+    psseID: str
+    component: str
+    psseType: str
+    poniter: int
     scale_factor: Optional[float] = 1.0
-    default_override: Optional[float] = None
-    def __init__(self, param_id: str, address: str, model: str, scale_factor: Optional[float] = 1.0, default_override: Optional[float] = None) -> None: ...
+    def __init__(self, param_id: str, psseID: str, component: str, psseType: str, poniter: int, scale_factor: Optional[float] = 1.0) -> None: ...
     def __repr__(self) -> str: ...
 
 class ParameterPSCAD:
     param_id: str
-    component_id: str
+    pscadID: str
+    component: str
     scale_factor: Optional[float] = 1.0
-    default_override: Optional[float] = None
-    def __init__(self, param_id: str, component_id: str, scale_factor: Optional[float] = 1.0, default_override: Optional[float] = None) -> None: ...
+    def __init__(self, param_id: str, pscadID: str, component: str, scale_factor: Optional[float] = 1.0) -> None: ...
     def __repr__(self) -> str: ...
 
 class ParameterPF:

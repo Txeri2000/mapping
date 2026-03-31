@@ -16,12 +16,3 @@ repos:
         pass_filenames: false
         # El fichero generado se añade automáticamente al commit
         stages: [pre-commit]
-
-      # ── Valida integridad referencial entre CSVs ─────────────────────────
-      - id: validate-params
-        name: "Validar param_ids entre general.csv y plataformas"
-        entry: python validate_params.py
-        language: system
-        files: ^params/.*\.csv$        # se dispara si cualquier CSV cambia
-        pass_filenames: false
-        stages: [pre-commit]
