@@ -185,7 +185,7 @@ class ParameterLoader:
 
     def load(self) -> list[ParameterGeneral]:
         """Punto de entrada principal. Devuelve la lista completa de ParameterGeneral."""
-        df_general = pd.read_csv(self._csv_path("general"))
+        df_general = pd.read_csv(self._csv_path("general"), delimiter=";")
         valid_ids  = set(df_general["param_id"])
 
         platform_data = {
